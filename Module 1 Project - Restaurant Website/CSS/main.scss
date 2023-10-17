@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+$fontName: 'Finger Paint', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+$fontAllText: 'Caveat Brush', cursive;
+
+
+$navBarH: 65px;
+$mavW: 1440px;
+
+// #home_upper 
+// //     width: 100%;
+//     background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../Assets/Images/interior.jpg');
+//     background-size: cover;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+header {
+    background-color: rgb(69, 65, 65);
+    color: white;
+    width: 100%;
+    height: $navBarH;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: $fontAllText;
+    box-sizing: border-box;
+    border-bottom: 3px solid rgb(224, 168, 63);
+    #real_header {
+        // background-color: rgb(69, 65, 65);
+        width: 100%;
+        height: 100%;
+        max-width: $mavW;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #place_name{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            h1 {
+                font-size: 30px;
+                font-family: $fontName;
+            }
+        }
+        nav {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            #nav_bar {
+                width: 80%;
+                height: 100%;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                .nav_menu {
+                    color: white;
+                    margin-right: 50px;
+                    user-select: none;
+                    text-decoration: none;
+                    list-style: none;
+                }
+                a {
+                    color: white;
+                    text-decoration: none;
+                    &:hover {
+                        color: rgb(224, 168, 63);
+                    }
+                }
+            }
+            #user_box {
+                width: 20%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+            #register_btn, #login_btn, #logout_btn {
+                background-color: rgb(224, 168, 63);
+                color: white;
+                border: none;
+                width: 80px;
+                height: 40px;
+                border-radius: 60px;
+                margin: 0 10px;
+                &:hover {
+                    background-color: rgb(166, 116, 24);
+                }
+            }
+        }
+    }
+}
+
+#main_content {
+    width: 100%;
+    min-height: 90vh;
+    height: 90vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../Assets/Images/interior.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    font-family: $fontAllText;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    #real_main_content {
+        width: 100%;
+        height: 100%;
+        max-width: $mavW;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .menu_list {
+            width: 15%;
+            height: 100%;
+            background-color: aquamarine;
+        }
+        .dishes {
+            flex: 1;
+            height: 100%;
+            background-color: bisque;
+        }
+        .d-block {
+            object-fit: cover;
+            height: 80vh;
+            filter: brightness(75%);
+        }
+    }
+}
+
+
+
+footer {
+    width: 100%;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    font-family: $fontAllText;
+    background-color: rgb(69, 65, 65);
+    box-sizing: border-box;
+    border-top: 3px solid rgb(224, 168, 63);
+    color: white;
+    #real_footer {
+        width: 100%;
+        height: 100%;
+        max-width: $mavW;
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        #logo_image {
+            height: 150px;
+        }
+        .intro {
+            width: 35%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h3 {
+                font-family: $fontName;
+            }
+            #readmore_btn {
+                background-color: rgb(224, 168, 63);
+                color: white;
+                border: none;
+                width: 120px;
+                height: 30px;
+                border-radius: 60px;
+                &:hover {
+                    background-color: rgb(166, 116, 24);
+                }
+            }
+        }
+    }
+}

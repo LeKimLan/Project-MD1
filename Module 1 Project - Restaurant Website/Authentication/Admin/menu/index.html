@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin menu</title>
+    <link rel="stylesheet" href="../admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="../../../Main JavaScript/adminCheck.js"></script>
+</head>
+<body>
+    <div id="home_upper">
+        <header>
+            <section id="real_header">
+                <div id="place_name">
+                    <h1>Fuji Family Restaurant</h1>
+                </div>
+                <div id="admin">
+                    <span>Welcome Admin <span class="admin_name"></span> </span>
+                </div>
+                <div id="logout">
+                    <button type="button" onclick="logout(event)">Log out</button>
+                </div>
+            </section>
+        </header>
+
+        <section id="main_content">
+                <div class="left_content">
+                    <button onclick="window.location.href='../admin.html'">Admin page</button>
+                    <button onclick="window.location.href='../menu/index.html'">Menu</button>
+                    <button onclick="window.location.href='../receipts/index.html'">Receipts</button>
+                    <button onclick="window.location.href='../accountManagement/index.html'">Accounts</button>
+                </div>
+                <div class="right_content">
+                    <form class="add_item" onsubmit="addItem(event)">
+                        Add more Item
+                        <p>Name: <input type="text" name="itemName"></p>
+                        <p>Price: <input type="text" name="itemPrice"></p>
+                        <p>Image: <input type="text" name="itemURL"></p>
+                        <button type="submit">Add</button>
+                    </form>
+                    <div class="menu"></div>
+                </div>
+        </section>
+    </div>
+
+    <footer>
+        <section id="real_footer"></section>
+    </footer>
+
+    <script src="../admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

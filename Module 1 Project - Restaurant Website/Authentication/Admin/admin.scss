@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+$fontName: 'Finger Paint', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+$fontAllText: 'Caveat Brush', cursive;
+
+
+$navBarH: 65px;
+$mavW: 1440px;
+
+#home_upper {
+    width: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../../Assets/Images/interior.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    header {
+        color: white;
+        width: 100%;
+        // max-width: $mavW;
+        height: $navBarH;
+        display: flex;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        font-family: $fontAllText;
+        background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) );
+        box-sizing: border-box;
+        border-bottom: 3px solid rgb(224, 168, 63);
+        #real_header {
+            // background-color: rgb(69, 65, 65);
+            width: 100%;
+            height: 100%;
+            max-width: $mavW;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            #place_name{
+                width: 30%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                h1 {
+                    font-size: 30px;
+                    font-family: $fontName;
+                }
+            }
+            #admin {
+                width: 30%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                word-spacing: 7px;
+                font-size: 23px;
+                #admin_name {
+                    text-transform: uppercase;
+                    color: orange;
+                    font-weight: 700;
+                    font-size: 30px;
+                }
+            }
+            #logout {
+                width: 30%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    #main_content {
+        width: 100%;
+        height: calc(100vh - $navBarH);
+        display: flex;
+        justify-content: center;
+        font-family: $fontAllText;
+        color: white;
+        .left_content {
+            height: 100%;
+            width: 25%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border-right: 3px solid rgb(224, 168, 63);
+        }
+        .right_content {
+            height: 100%;
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+    }
+}
+
+.menu {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    .item {
+        height: 310px;
+        width: 250px;
+        box-sizing: border-box;
+        border-radius: 15px;
+        margin: 0 20px;
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+
+        .item_image {
+            height: 180px;
+            width: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .item_text {
+            // display: flex;
+            // flex-direction: column;
+            height: 70px;
+            justify-content: space-between ;
+            padding: 0 20px;
+            .order_btn {
+                background-color: rgb(224, 168, 63);
+                color: white;
+                border: none;
+                width: 60px;
+                height: 45px;
+                border-radius: 60px;
+                &:hover {
+                    background-color: rgb(166, 116, 24);
+                }
+            }
+            .item_manage {
+                display: flex;
+                justify-content: space-between;
+            }
+            .item_info {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+        }
+    }
+}
+
